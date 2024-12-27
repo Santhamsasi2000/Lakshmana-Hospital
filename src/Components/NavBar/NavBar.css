@@ -1,0 +1,80 @@
+nav
+{
+    background-color: #300c41;
+}
+
+.unorder-list
+{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-title
+{
+    text-decoration: none;
+    color: white;
+    font-weight:900;
+    font-size: 20px;
+}
+
+.active
+{
+    background-color: blue;
+}
+
+nav ul li a:not(.active):hover
+{
+    background: #000;
+}
+
+nav .menu
+{
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right:0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 10px;
+}
+
+nav .menu span
+{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+@media all and (max-width: 768px)
+{
+    nav .menu
+    {
+        display: flex;
+    }
+
+    nav
+    {
+        flex-direction: column;
+    }
+
+    .unorder-list
+    {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .unorder-list.open
+    {
+        display: flex;
+    }
+}
